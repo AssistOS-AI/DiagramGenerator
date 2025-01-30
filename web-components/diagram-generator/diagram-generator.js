@@ -1,16 +1,19 @@
 const spaceModule = require("assistos").loadModule("space", {});
-const llmModule= require('assistos').loadModule('llm',{})
-const documentModule=require('assistos').loadModule('document',{})
-import mermaid from '../../../../lib/mermaid/mermaid.esm.min.mjs';
+const llmModule = require('assistos').loadModule('llm',{})
+const documentModule = require('assistos').loadModule('document',{})
+import mermaid from '../../../../../../wallet/lib/mermaid/mermaid.esm.min.mjs';
 let cnt = 0;
-import pluginUtils from "../../../../core/plugins/pluginUtils.js";
+import pluginUtils from "../../../../../../wallet/core/plugins/pluginUtils.js";
 
 export class DiagramGenerator{
-
     constructor(element, invalidate) {
         this.element = element;
         this.invalidate = invalidate;
-        let documentPresenter = document.querySelector("document-view-page").webSkelPresenter;
+        let documentPage = document.querySelector("document-view-page");
+        if(!documentPage){
+            return showApplicationError("Application page not done yet", "Use this as a plugin in paragraph");
+        }
+        let documentPresenter = documentPage.webSkelPresenter;
         let context = pluginUtils.getContext(this.element);
         this.paragraphId = context.paragraphId;
         this.paragraphPresenter = documentPresenter.element.querySelector(`paragraph-item[data-paragraph-id="${this.paragraphId}"]`).webSkelPresenter;
@@ -19,7 +22,6 @@ export class DiagramGenerator{
         this.invalidate();
         mermaid.initialize({startOnLoad: false});
         this.generatedMermaidCode = "";
-
     }
     beforeRender(){
 

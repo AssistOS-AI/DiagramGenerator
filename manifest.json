@@ -8,7 +8,7 @@
     {
       "name": "diagram-generator",
       "presenterClassName": "DiagramGenerator",
-      "type": "modals"
+      "type": "pages"
     }
   ],
   "services": [
@@ -27,7 +27,7 @@
       {
         "name": "Diagram Generator",
         "componentName": "diagram-generator",
-        "icon": "/assets/icons/light-bulb.svg",
+        "icon": "/assets/icons/diagram.svg",
         "presenterClassName": "DiagramGenerator"
       }
     ]

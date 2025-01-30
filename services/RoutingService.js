@@ -1,15 +1,15 @@
 export class RoutingService {
     constructor() {}
     async navigateToLocation(locationArray = [], appName) {
-        const PROOFREADER_PAGE = "proofreader-page";
+        const DIAGRAM_GENERATOR = "diagram-generator";
 
-       if (locationArray.length === 0 || locationArray[0] === PROOFREADER_PAGE) {
-            const pageUrl = `${assistOS.space.id}/${appName}/${PROOFREADER_PAGE}`;
-            await assistOS.UI.changeToDynamicPage(PROOFREADER_PAGE, pageUrl);
+       if (locationArray.length === 0 || locationArray[0] === DIAGRAM_GENERATOR) {
+            const pageUrl = `${assistOS.space.id}/${appName}/${DIAGRAM_GENERATOR}`;
+            await assistOS.UI.changeToDynamicPage(DIAGRAM_GENERATOR, pageUrl);
             return;
         }
-         if(locationArray[locationArray.length-1]!== PROOFREADER_PAGE){
-         console.error(`Invalid URL: URL must end with ${PROOFREADER_PAGE}`);
+         if(locationArray[locationArray.length-1]!== DIAGRAM_GENERATOR){
+         console.error(`Invalid URL: URL must end with ${DIAGRAM_GENERATOR}`);
             return;
         }
         const webComponentName = locationArray[locationArray.length - 1];

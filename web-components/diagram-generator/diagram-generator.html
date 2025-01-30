@@ -5,15 +5,15 @@
     </div>
 </div>
 <div class="modal-body">
+    <div class="view-section">
+        <img class="paragraph-image hidden" src="" alt="img">
+    </div>
     <div id="text-input-container" class="hidden">
         <label for="diagram-text">Inserare text:</label>
         <input type="text" id="diagram-text" class="diagram-input">
         <button class="submit-button" id="submit-diagram" data-local-action="submitChanges">Submit</button>
     </div>
-
     <div id="code-input-container" class="hidden">
-
-
         <div id="language-checkbox-container">
             <p>Selecteaza limbajul de programare:</p>
             <label>
@@ -61,16 +61,10 @@
                 Rust
             </label>
         </div>
-
-        <button class="submit-button" id="code-diagram" data-local-action="submitChanges_code">Submit</button>
-
-    </div>
-
-    <div class="view-section">
-        <img class="paragraph-image hidden" src="" alt="img">
+        <button class="general-button submit-button" id="code-diagram" data-local-action="submitChanges_code">Submit</button>
     </div>
     <div class="actions-section">
-        <button class="general-button generate-diagram image-2" id="diagram" data-local-action="generateDiagramCode">
+        <button class="general-button generate-diagram image-2" onclick="this.disabled = true;" id="diagram" data-local-action="generateDiagramCode">
             Generate Diagram
         </button>
         <button class="edit-diagram general-button hidden image-2" data-local-action="editDiagram">Edit Diagram with
@@ -95,8 +89,4 @@
             <p class="text">The modified mermaid Code is incorrect!</p>
         </div>
     </div>
-
-
 </div>
-
-
