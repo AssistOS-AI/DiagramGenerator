@@ -1,0 +1,36 @@
+{
+  "applicationName":"DiagramGenerator",
+  "version": "0.0.1",
+  "entryPointComponent": "diagram-generator",
+  "description": "Diagram Generator helps you create different types of diagrams using AI",
+  "componentsDirPath": "web-components",
+  "components":[
+    {
+      "name": "diagram-generator",
+      "presenterClassName": "DiagramGenerator",
+      "type": "modals"
+    }
+  ],
+  "services": [
+    {
+      "serviceName": "RoutingService",
+      "servicePath": "services/RoutingService.js"
+    }
+  ],
+  "manager": {
+    "path": "manager.js",
+    "name": "Manager"
+  },
+  "plugins": {
+    "abstract": [],
+    "paragraph": [
+      {
+        "name": "Diagram Generator",
+        "componentName": "diagram-generator",
+        "icon": "/assets/icons/light-bulb.svg",
+        "presenterClassName": "DiagramGenerator"
+      }
+    ]
+  }
+}
+
