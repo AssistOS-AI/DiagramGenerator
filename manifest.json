@@ -28,7 +28,8 @@
         "name": "Diagram Generator",
         "componentName": "diagram-generator",
         "icon": "/assets/icons/diagram.svg",
-        "presenterClassName": "DiagramGenerator"
+        "presenterClassName": "DiagramGenerator",
+        "type": "component"
       }
     ]
   }

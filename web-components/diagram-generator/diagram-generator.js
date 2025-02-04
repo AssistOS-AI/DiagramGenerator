@@ -101,7 +101,6 @@ export class DiagramGenerator{
         let error = this.element.querySelector(".modal-error");
         error.classList.add("hidden");
         await this.validateMermaidUserCode(input)
-        // assistOS.UI.closeModal(this.element);
     }
 
 
@@ -266,7 +265,6 @@ export class DiagramGenerator{
         // this.downloadCode(cleanedCode, 'mermaid2.txt');
         // this.generateGraphicalDiagram(cleanedCode);
         await this.validateMermaidCode(cleanedCode)
-        assistOS.UI.closeModal(this.element);
     }
 
     async validateMermaidCode(input) {
@@ -459,11 +457,5 @@ export class DiagramGenerator{
         lines.pop();
 
         return lines.join('\n');
-    }
-
-
-
-    closeModal(button){
-        assistOS.UI.closeModal(this.element);
     }
 }
