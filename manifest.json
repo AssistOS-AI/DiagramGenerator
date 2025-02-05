@@ -25,11 +25,11 @@
     "abstract": [],
     "paragraph": [
       {
-        "name": "Diagram Generator",
-        "componentName": "diagram-generator",
+        "tooltip": "Diagram Generator",
+        "component": "diagram-generator",
         "icon": "assets/icons/diagram.svg",
-        "presenterClassName": "DiagramGenerator",
-        "type": "component"
+        "presenter": "DiagramGenerator",
+        "type": "embedded"
       }
     ]
   }
