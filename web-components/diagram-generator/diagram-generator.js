@@ -428,9 +428,6 @@ export class DiagramGenerator{
                     */
 
                     canvas.remove();
-                    let videoPresenter = this.paragraphPresenter.videoPresenter;
-                    videoPresenter.refreshVideoPreview();
-
                 }, 'image/png');
             };
 
